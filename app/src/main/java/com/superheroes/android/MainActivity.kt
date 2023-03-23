@@ -48,11 +48,11 @@ class MainActivity : ComponentActivity() {
                                 Row {
                                     AsyncImage(model = hero.image.url, contentDescription = hero.name, modifier = Modifier.width(96.dp))
                                     Text(hero.name, modifier = Modifier.padding(horizontal = 16.dp))
-                                    if ((hero.powerstats.speed.toIntOrNull() ?: 0) > 50) {
+                                    if (hero.powerstats.speed.toIntOrNull() > 50) {
                                         Text("[Fast]")
-                                    } else if ((hero.powerstats.power.toIntOrNull()?: 0) > 55) {
+                                    } else if (hero.powerstats.power.toIntOrNull() > 55) {
                                         Text("[Strong]")
-                                    } else if ((hero.powerstats.intelligence.toIntOrNull()?: 0) > 60) {
+                                    } else if (hero.powerstats.intelligence.toIntOrNull() > 60) {
                                         Text("[Smart]")
                                     }
                                 }
